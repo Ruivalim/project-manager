@@ -61,10 +61,10 @@ cli.main(async () => {
 					const template_url = args[2];
 					const template_name = args[3];
 					const save = args[4] == "--save" ? true : false;
-					actionInPM(`git submodule --quiet add ${template_url} templates/${template_name}`);
-					actionInPM(`git submodule --quiet update --init --recursive`);
+					await actionInPM(`git submodule --quiet add ${template_url} templates/${template_name}`);
+					await actionInPM(`git submodule --quiet update --init --recursive`);
 					if( save ){
-						actionInPM(`git add --all && git commit -m "feat: template ${template_name} added to the project" && git push`);
+						await actionInPM(`git add --all && git commit -m "feat: template ${template_name} added to the project" && git push`);
 					}
 					success("Templated saved successfully");
 					break;
@@ -74,8 +74,8 @@ cli.main(async () => {
 			break;
 		case "update":
 			message("Updating templates...");
-			actionInPM(`git submodule --quiet update --init --recursive`);
-			actionInPM(`git pull`);
+			await actionInPM(`git submodule --quiet update --init --recursive`);
+			await actionInPM(`git pull`);
 			message("Templates updated successfully");
 			break;
 		case "help":

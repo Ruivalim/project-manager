@@ -7,3 +7,6 @@
 [submodule "templates/react"]
 	path = templates/react
 	url = https://github.com/Ruivalim/react-boilerplate
+[submodule "templates/express-api"]
+	path = templates/express-api
+	url = https://github.com/Ruivalim/express-api-boilerplate
