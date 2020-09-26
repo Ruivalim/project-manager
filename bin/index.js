@@ -31,8 +31,8 @@ const error = (text) => {
 	cli.exit();
 }
 
-const actionInPM = (action) => {
-	exec(`cd ${pmPath} && ${action}`);
+const actionInPM = async (action) => {
+	await exec(`cd ${pmPath} && ${action}`);
 };
 
 cli.main(async () => {
@@ -64,7 +64,7 @@ cli.main(async () => {
 					actionInPM(`git submodule --quiet add ${template_url} templates/${template_name}`);
 					actionInPM(`git submodule --quiet update --init --recursive`);
 					if( save ){
-						actionInPM(`git add --all && git commit -m "feat: template ${template_name} added to the project`);
+						actionInPM(`git add --all && git commit -m "feat: template ${template_name} added to the project" && git push`);
 					}
 					success("Templated saved successfully");
 					break;
