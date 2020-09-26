@@ -79,7 +79,7 @@ cli.main(async () => {
 		case "help":
 			success("Usage:")
 			highlight("$ pm new project $template $project_name");
-			message("Templates avaliable:");
+			message("Templates available:");
 			const templates = fs.readdirSync(projectsPath);
 			templates.map((file) => {
 				normal("\t -> "+file);
