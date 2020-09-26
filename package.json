@@ -1,0 +1,18 @@
+{
+	"name": "project-manager",
+	"version": "1.0.0",
+	"main": "bin/index.js",
+	"author": "Rui Valim <r.valim.junior@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"project-manager": "node bin/index.js",
+		"pm": "node bin/index.js"
+	},
+	"dependencies": {
+		"chalk": "^4.1.0",
+		"cli": "^1.0.1"
+	},
+	"bin": {
+		"pm": "./bin/index.js"
+	}
+}

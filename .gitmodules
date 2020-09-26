@@ -1,0 +1,9 @@
+[submodule "templates/typescript"]
+	path = templates/typescript
+	url = https://github.com/Ruivalim/typescript-boilerplate
+[submodule "templates/express"]
+	path = templates/express
+	url = https://github.com/Ruivalim/express-boilerplate
+[submodule "templates/react"]
+	path = templates/react
+	url = https://github.com/Ruivalim/react-boilerplate
