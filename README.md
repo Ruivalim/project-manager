@@ -2,7 +2,7 @@
 
 ## Installation
 
-After cloning the repo use `nem install -g .` to install the project manager.
+After cloning the repo use `npm install -g .` to install the project manager.
 ## Usage
 
 ```bash

@@ -75,6 +75,8 @@ cli.main(async () => {
 		case "update":
 			message("Updating templates...");
 			actionInPM(`git submodule --quiet update --init --recursive`);
+			actionInPM(`git pull`);
+			message("Templates updated successfully");
 			break;
 		case "help":
 			success("Usage:")
