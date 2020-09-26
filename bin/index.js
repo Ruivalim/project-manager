@@ -58,6 +58,7 @@ cli.main(async () => {
 					await exec(`cd ./${path} && git init && git add --all && git commit -m "First commit"`);
 					break;
 				case "template":
+					message("Installing template...");
 					const template_url = args[2];
 					const template_name = args[3];
 					const save = args[4] == "--save" ? true : false;
