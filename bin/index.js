@@ -54,8 +54,8 @@ cli.main(async () => {
 					}
 
 					await exec(`mkdir ${path}`);
-					await exec(`cp -R ${projectsPath}/${template}/ ./${path} && rm -rf ./${path}/.git && yarn`);
-					await exec(`cd ./${path} && git init && git add --all && git commit -m "First commit"`);
+					await exec(`cp -R ${projectsPath}/${template}/ ./${path} && rm -rf ./${path}/.git`);
+					await exec(`cd ./${path} && yarn && git init && git add --all && git commit -m "First commit"`);
 					break;
 				case "template":
 					message("Installing template...");
