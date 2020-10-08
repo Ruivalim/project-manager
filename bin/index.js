@@ -76,7 +76,9 @@ cli.main(async () => {
 		case "update":
 			message("Updating templates...");
 			await actionInPM(`git submodule --quiet update --init --recursive`);
+			await actionInPM(`git submodule foreach git pull origin master`);
 			await actionInPM(`git pull`);
+			await actionInPM(`git add --all && git commit -m "feat: templates version update" && git push`);
 			message("Templates updated successfully");
 			break;
 		case "help":
